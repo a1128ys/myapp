@@ -1,9 +1,14 @@
 set :application, "myapp"
 set :deploy_to, "/Users/rails/myapp"
-set :repository,  "git@aiit.github.com:a1128ys/myapp"
+set :repository,  "git@aiit.github.com:a1128ys/myapp.git"
 
+default_run_options[:pty] = true
 set :scm, :git
 set :git, "/usr/local/git/bin/git"
+set :git_account, "a1128ys"
+set :scm_passphrase, "4jST?zI0"
+#set :scm_passphrase, Proc.new { Capistrano::CLI.password_prompt('Git Password: ') }
+
 set :use_sudo, false
 
 role :web, "localhost"                          # Your HTTP server, Apache/etc
