@@ -1,10 +1,10 @@
 set :application, "myapp"
 set :deploy_to, "/Users/rails/myapp"
-set :repository,  "git@github.com:a1128ys/myapp.git"
+set :repository,  "git@aiit.github.com:a1128ys/myapp"
 
 set :scm, :git
 set :git, "/usr/local/git/bin/git"
-# Or: `accurev`, `bzr`, `cvs`, `darcs`, `git`, `mercurial`, `perforce`, `subversion` or `none`
+set :use_sudo, false
 
 role :web, "localhost"                          # Your HTTP server, Apache/etc
 role :app, "localhost"                          # This may be the same as your `Web` server
